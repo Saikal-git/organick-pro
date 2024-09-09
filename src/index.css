@@ -38,7 +38,12 @@ a {
   background-size: contain;
   background-position: top;
   position: relative;
-  
+}
+@media (max-width: 320px) {
+  .homeNg {
+    min-height: 130vh;
+    background-size: cover;
+  }
 }
 .bg {
   position: absolute;
