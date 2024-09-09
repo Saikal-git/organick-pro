@@ -41,7 +41,7 @@ a {
 }
 @media (max-width: 320px) {
   .homeNg {
-    min-height: 130vh;
+    /* min-height: 50vh; */
     background-size: cover;
   }
 }

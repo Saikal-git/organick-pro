@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import bgHome from "../../assets/Image-home2.png";
+import bgHome2 from "../../assets/homeBg3.png";
 import one from "../../assets/1.png";
 import two from "../../assets/2.png";
 import orange from "../../assets/Photo-orange.png";
@@ -17,22 +18,36 @@ import emptyProd from "../../assets/empty_cart_prod1.png";
 const Home = () => {
   const navigate = useNavigate();
   const { product, user } = useSelector((s) => s.add);
+  const [bgImage, setBgImage] = useState(bgHome);
+
   useEffect(() => {
-    window.scrollTo(0, 10);
+    const handleResize = () => {
+      if (window.innerWidth <= 500) {
+        setBgImage(bgHome2);
+      } else {
+        setBgImage(bgHome);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Устанавливаем изначальное состояние
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <>
       {/* <div className=""> */}
       <div
         style={{
           // minHeight: "100vh",
-          backgroundImage: `url(${bgHome}) `,
+          backgroundImage: `url(${bgImage}) `,
           // backgroundRepeat: "no-repeat",
           // backgroundSize: "contain",
           // backgroundPosition: "top",
           // position: "relative",
         }}
-        className="homeNg"
+        className={`homeNg bg-[url('${bgHome}')]  320:bg-[url('${bgHome2}')]`}
       >
         <div className="">
           <h1 className=" 320:text-[23px] font-bold text-[rgba(39,76,91,1)] absolute top-[90px] 320:top-[30px] left-[160px] 320:left-[50px] text-[clamp(30px,8vw,67px)]">
@@ -44,7 +59,7 @@ const Home = () => {
             onClick={() => (user ? navigate(`/createProduct`) : alert(404))}
             className="text-[#274C5B] absolute top-[195px] 
             2xl:top-[307px] lg:mt-[38px] xl:top-[265px] 867:mt-[29px] md:mt-[-80px] 
-            sm:top-[115px] 546:top-[75px] 400:top-[115px] 320:top-[145px]  2xl:left-[150px] 
+            sm:top-[115px] 546:top-[75px] 400:top-[135px] 320:top-[145px]  2xl:left-[150px] 
             867:ml-[6px] sm:left-[45px] lg:ml-[18px] xl:left-[120px] md:ml-[-40px] 546:left-[30px]
              400:left-[10px]  320:left-[5px] ml-[40px] text-[20px] 546:text-[15px] sm:text-[17px] 400:text-[10px] 
              320:text-[10px] 867:text-[18px] bg-[#EFD372] font-bold flex items-center gap-3 py-[20px] 867:py-[18px] 
