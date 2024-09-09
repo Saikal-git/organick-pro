@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import bgHome from "../../assets/Banner11.png";
+import bgHome from "../../assets/Image-home2.png";
 import one from "../../assets/1.png";
 import two from "../../assets/2.png";
 import orange from "../../assets/Photo-orange.png";
@@ -25,18 +25,31 @@ const Home = () => {
       {/* <div className=""> */}
       <div
         style={{
-          minHeight: "100vh",
+          // minHeight: "100vh",
           backgroundImage: `url(${bgHome}) `,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
-          backgroundPosition: "top",
-          position: "relative",
+          // backgroundRepeat: "no-repeat",
+          // backgroundSize: "contain",
+          // backgroundPosition: "top",
+          // position: "relative",
         }}
+        className="homeNg"
       >
         <div className="">
+          <h1 className=" 320:text-[13px] font-bold text-[rgba(39,76,91,1)] absolute top-[90px] 320:top-[30px] left-[160px] 320:left-[50px] text-[clamp(30px,8vw,67px)]">
+            Choose the best <br />
+            healthier way <br />
+            of life
+          </h1>
           <button
             onClick={() => (user ? navigate(`/createProduct`) : alert(404))}
-            className="text-[#274C5B] absolute top-[195px] 2xl:top-[307px] lg:mt-[38px] xl:top-[265px] 867:mt-[29px] md:mt-[-80px] sm:top-[115px] 546:top-[75px] 400:top-[115px] 320:top-[95px]  2xl:left-[150px] 867:ml-[6px] sm:left-[45px] lg:ml-[18px] xl:left-[120px] md:ml-[-40px] 546:left-[30px] 400:left-[10px]  320:left-[2px] ml-[40px] text-[20px] 546:text-[15px] sm:text-[17px] 400:text-[10px] 320:text-[10px] 867:text-[18px] bg-[#EFD372] font-bold flex items-center gap-3 py-[20px] 867:py-[18px] md:py-[17px] 546:py-[13px] sm:py-[15px] 400:py-[12px] 320:py-[10px] px-[30px] 867:px-[25px] md:px-[27px] sm:px-[25px] 546:px-[18px] 400:px-[13px] 320:px-[8px] rounded-xl"
+            className="text-[#274C5B] absolute top-[195px] 
+            2xl:top-[307px] lg:mt-[38px] xl:top-[265px] 867:mt-[29px] md:mt-[-80px] 
+            sm:top-[115px] 546:top-[75px] 400:top-[115px] 320:top-[95px]  2xl:left-[150px] 
+            867:ml-[6px] sm:left-[45px] lg:ml-[18px] xl:left-[120px] md:ml-[-40px] 546:left-[30px]
+             400:left-[10px]  320:left-[2px] ml-[40px] text-[20px] 546:text-[15px] sm:text-[17px] 400:text-[10px] 
+             320:text-[10px] 867:text-[18px] bg-[#EFD372] font-bold flex items-center gap-3 py-[20px] 867:py-[18px] 
+             md:py-[17px] 546:py-[13px] sm:py-[15px] 400:py-[12px] 320:py-[10px] px-[30px] 867:px-[25px] md:px-[27px] sm:px-[25px] 
+             546:px-[18px] 400:px-[13px] 320:px-[8px] rounded-xl"
           >
             Explore Now <FaArrowAltCircleRight />
           </button>

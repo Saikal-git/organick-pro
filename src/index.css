@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 a {
   text-decoration: none;
@@ -32,7 +32,14 @@ a {
 .icons {
   background: rgba(239, 246, 241, 1);
 }
-
+.homeNg {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  position: relative;
+  
+}
 .bg {
   position: absolute;
   width: 100%;

@@ -14,6 +14,7 @@ export default {
         lg: "992px", // измените здесь на 992px
         xl: "1024px",
         "2xl": "1200px",
+        // fluid: "clamp(30px, 8vw, 67px)",
       },
     },
   },
